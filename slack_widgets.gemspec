@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['benny.sitbon@gmail.com']
 
   spec.summary       = %q{An abstraction of the json structure needed to create widgets in Slack message attachments}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
