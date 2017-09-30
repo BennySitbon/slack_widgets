@@ -10,7 +10,7 @@ describe SlackWidgets do
   # end
 
   context 'when creating widgets' do
-    it 'can creates a button' do
+    it 'can create a button' do
       button = SlackWidgets::Button.create(name: 'test')
       expect(button).to include(name: 'test')
     end
