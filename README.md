@@ -1,8 +1,8 @@
 # SlackWidgets
-Developing a Slack app in Ruby? This gem will make your life a bit easier.
-For Slack message attachments:
-JSON button and pickers - lame :\
-PORO button and pickers - Yeahy! :)
+Developing a Slack app in Ruby? This gem will make your life a bit easier.  
+For Slack message attachments:  
+JSON button and pickers - lame :\  
+PORO button and pickers - Yeahy! :)  
 
 
 
@@ -25,9 +25,22 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-SlackWidgets::DangerButton.create(name: 'test', text: 'text', value: 1, confirm_hash: 'POSITIVE??')
+confirm_hash = { title: 'Are you sure?',
+                text: "Wouldn't you prefer to think about this a bit more?",
+                ok_text: 'Yes',
+                dismiss_text: 'No'}
+SlackWidgets::DangerButton.create(name: 'floopy_destroyer', text: 'Destroy floopyland', value: 'destroy_all', confirm_hash: confirm_hash)
 
-# => {:name=>"test", :text=>"text", :type=>"button", :value=>1, :style=>"danger", :confirm=>"POSITIVE??"}
+# => {:name=>"floopy_destroyer",
+#     :text=>"Destroy floopyland",
+#     :type=>"button",
+#     :value=>"destroy_all",
+#     :style=>"danger",
+#     :confirm=>{:title=>"Are you sure?",
+#                :text=>"Wouldn't you prefer to think about this a bit more?",
+#                :ok_text=>"Yes",
+#               :dismiss_text=>"No"}}
+# which is exactly the format Slack expects for the button
 ```
 
 ## Development
