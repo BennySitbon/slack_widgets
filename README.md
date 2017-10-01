@@ -1,8 +1,10 @@
 # SlackWidgets
+Developing a Slack app in Ruby? This gem will make your life a bit easier.
+For Slack message attachments:
+JSON button and pickers - lame :\
+PORO button and pickers - Yeahy! :)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/slack_widgets`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +24,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+SlackWidgets::DangerButton.create(name: 'test', text: 'text', value: 1, confirm_hash: 'POSITIVE??')
+
+# => {:name=>"test", :text=>"text", :type=>"button", :value=>1, :style=>"danger", :confirm=>"POSITIVE??"}
+```
 
 ## Development
 
@@ -32,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/slack_widgets.
+Bug reports and pull requests are welcome on GitHub at https://github.com/BennySitbon/slack_widgets.
 
 
 ## License
