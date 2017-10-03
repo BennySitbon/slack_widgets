@@ -1,11 +1,6 @@
 # SlackWidgets
 Developing a Slack app in Ruby? This gem will make your life a bit easier.  
-For Slack message attachments:  
-JSON button and pickers - lame :\  
-PORO button and pickers - Yeahy! :)  
-
-
-
+SlackWidgets will remove the need to write JSON to create Slack buttons and other widgets.
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -25,24 +20,18 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-confirm_hash = { title: 'Are you sure?',
-                text: "Wouldn't you prefer to think about this a bit more?",
-                ok_text: 'Yes',
-                dismiss_text: 'No'}
-SlackWidgets::DangerButton.create(name: 'floopy_destroyer', text: 'Destroy floopyland', value: 'destroy_all', confirm_hash: confirm_hash)
+SlackWidgets::PrimaryButton.create(name: 'continue_button', text: 'Continue', value: 'continue')
 
-# => {:name=>"floopy_destroyer",
-#     :text=>"Destroy floopyland",
+# => {:name=>"continue_button",
+#     :text=>"Continue",
 #     :type=>"button",
-#     :value=>"destroy_all",
-#     :style=>"danger",
-#     :confirm=>{:title=>"Are you sure?",
-#                :text=>"Wouldn't you prefer to think about this a bit more?",
-#                :ok_text=>"Yes",
-#               :dismiss_text=>"No"}}
-# which is exactly the format Slack expects for the button
+#     :style=>"primary",
+#     :value=>"continue"}
+# This is exactly the format Slack expects in order to create
+# a nice green (approval) button with the text "Continue" on it
 ```
-
+Primary and Danger button examples:
+![Primary button example](https://user-images.githubusercontent.com/2252680/29849715-015b42e2-8d6c-11e7-93a9-fa71e83a6345.png)
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
