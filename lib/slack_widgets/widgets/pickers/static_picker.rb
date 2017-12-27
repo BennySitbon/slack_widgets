@@ -13,8 +13,9 @@ module SlackWidgets
                   'selected_options': [@pre_selection],
                   'value': @value)
     end
-  end
-  def self.create(name:, options:, text: nil, selected_index: nil, value: nil)
-    new(name: name, options: options, text: text, selected_index: selected_index, value: value).render
+
+    def self.create(name:, options:, text: nil, selected_index: nil, value: nil)
+      new(name: name, options: options, text: text, selected_index: selected_index, value: value).render
+    end
   end
 end
