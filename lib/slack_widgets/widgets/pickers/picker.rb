@@ -1,5 +1,4 @@
 module SlackWidgets
-  # todo: should this be abstract?
   class Picker
     def initialize(name:, text: nil)
       @name = name
