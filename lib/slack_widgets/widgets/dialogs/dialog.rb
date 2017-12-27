@@ -17,8 +17,11 @@ module SlackWidgets
       }
     end
 
-    def create(callback_id:, title:, submit_button_label:, elements:)
-      new(callback_id: callback_id, title: title, submit_button_label: submit_button_label, elements: elements)
+    def self.create(callback_id:, title:, submit_button_label:, elements:)
+      new(callback_id: callback_id,
+          title: title,
+          submit_button_label: submit_button_label,
+          elements: elements).render
     end
   end
 end
